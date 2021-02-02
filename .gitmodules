@@ -1,0 +1,6 @@
+[submodule "stm32-cmake"]
+	path = stm32-cmake
+	url = https://github.com/ObKo/stm32-cmake
+[submodule "stm32-svd"]
+	path = stm32-svd
+	url = https://github.com/svcguy/stm32-svd
