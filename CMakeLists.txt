@@ -1,22 +1,38 @@
 cmake_minimum_required(VERSION 3.13)
 
+# This line needs to be changed to your toolchain bin folder
 set(STM32_TOOLCHAIN_PATH "C:\\GCC\\9-2020-q2-update\\bin")
-set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/../stm32-cmake/cmake/stm32_gcc.cmake)
 
-project(stm32-vscode-cmake-template C ASM)
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/stm32-cmake/cmake/stm32_gcc.cmake)
 
-stm32_fetch_cube(G0)
+# You can change the project name here
+# This determines the elf file name
+project(template C ASM)
 
+# Change the family here to match yours
+stm32_fetch_cmsis(G0)
+stm32_fetch_hal(G0)
+
+# Change the family and mcu to match yours
 find_package(CMSIS COMPONENTS STM32G031J6 REQUIRED)
+find_package(HAL COMPONENTS STM32G0 REQUIRED)
 
 set(PROJECT_INCLUDES
-    inc/main.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/main.h
 )
 
 set(PROJECT_SOURCES
     src/main.c
 )
 
-target_include_directories(stm32-vscode-cmake-template ${PROJECT_INCLUDES})
-add_executable(stm32-fetch-g0 ${PROJECT_SOURCES})
-target_link_libraries(stm32-fetch-g0 HAL::STM32::G031J6 STM32::NoSys)
+add_executable(template ${PROJECT_SOURCES})
+
+target_include_directories(template PUBLIC ${PROJECT_INCLUDES})
+
+# Change to mcu and required components to match your requirements
+target_link_libraries(template
+     CMSIS::STM32::G031J6
+     HAL::STM32::G0::LL_UTILS
+     HAL::STM32::G0::LL_RCC
+     STM32::Nano
+)
