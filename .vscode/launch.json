@@ -8,11 +8,11 @@
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "stlink",
-            "stlinkPath": "${TEMPLATE_STLINK_PATH}",
-            "stm32cubeprogrammer": "${TEMPLATE_CUBE_PROG}",
-            "gdbPath": "${TEMPLATE_GDB_PATH}",
-            "device": "${TEMPLATE_DEVICE}",
-            "svdFile": "${workspaceFolder}\\stm32-svd\\${TEMPLATE_SVD}",
+            "v1": false,
+            "stlinkPath": "C:\\ST\\STM32Cube\\ST-LINK-GDB\\ST-LINK_gdbserver.exe",
+            "stm32cubeprogrammer": "C:\\ST\\STM32Cube\\STM32CubeProgrammer\\bin",
+            "device": "STM32G031J6",
+            "svdFile": "${workspaceFolder}\\stm32-svd\\g0\\STM32G031.svd",
             "runToMain": true
         }
     ]
