@@ -10,9 +10,9 @@ Cloning this repo will give you a template that can be used to start STM32 proje
 - A debug probe supported by Cortex-Debug ([see here for list](https://github.com/Marus/cortex-debug))
 ### How to use
 1. Clone this repository
-        - `git clone https://github.com/svcguy/stm32-vscode-cmake-template <YOUR PROJECT NAME>`
-        - `git submodule init`
-        - `git submodule update`
+    - `git clone https://github.com/svcguy/stm32-vscode-cmake-template <YOUR PROJECT NAME>`
+    - `git submodule init`
+    - `git submodule update`
 2. Adjust paths and project specific settings
     - CMakeLists.txt
         - Change STM32_TOOLCHAIN_PATH to your ARM cross compile toolchain location
