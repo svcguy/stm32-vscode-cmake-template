@@ -9,6 +9,8 @@
             "type": "cortex-debug",
             "servertype": "stlink",
             "v1": false,
+            // Specify your path to the ARM toolchain
+            "armToolchainPath": "C:\\GCC\\9-2020-q2-update\\bin",
             // Specify your path to ST-LINK_gdbserver.exe or remove if installed
             //  in the default location
             "stlinkPath": "C:\\ST\\STM32Cube\\ST-LINK-GDB\\ST-LINK_gdbserver.exe",

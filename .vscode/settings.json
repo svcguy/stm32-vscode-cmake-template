@@ -17,5 +17,7 @@
     // Force a build before a debug
     "cmake.buildBeforeRun": true,
     // Automatically use CMake to configure Intellisense
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    // Specifiy a generator
+    "cmake.generator": "Ninja"
 }

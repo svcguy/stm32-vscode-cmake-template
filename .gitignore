@@ -1,0 +1,5 @@
+# Ignore cortex-debug register states
+/.vscode/*.cortex-debug*
+
+# Ignore the build folder
+/build
